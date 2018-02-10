@@ -1,0 +1,30 @@
+html{
+    height: 100%;
+}
+
+.container[_ngcontent-c1]{
+    width:100%;
+    height: 100%;
+}
+.answer{
+    color: rgba(40, 40, 40, 0.55);
+}
+input[type="radio"] {
+    display: table-cell;
+    vertical-align: middle;
+    font-family: sans-serif;
+  }
+
+h2,p{
+      color: white;
+}
+
+form{
+      margin-top: 225px;
+}
+.col-md-6{
+    text-align: center;
+}
+.btn-info{
+    float: right;
+}

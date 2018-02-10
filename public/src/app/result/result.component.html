@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div class="container" class="results">
+    <title>Results</title>
+
+     <div class="row" class="results">
+        <div class="col-md-4 col-md-offset-4">
+          <h2 *ngIf="score > 7">Excellent! Congratulations you scored {{score}}/10</h2>
+          <h2 *ngIf="score < 8 && score > 5">Congratulations! you scored {{score}}/10</h2>
+          <h2 *ngIf="score < 6">You scored {{score}}/10. Want to play again?</h2>
+          <br>
+          <button class="btn btn-primary" (click)="navtoQuiz()">Play again</button> 
+          <!--<button class="btn btn-primary" (click)="navtoScores()">View Scores</button>-->
+        </div>  
+      </div>
+</div>
