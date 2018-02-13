@@ -6,9 +6,9 @@
 <body>
   <div class="container">
     <h1><strong>MusicMojo</strong></h1>
-    <form (submit)="onSubmit(myform.value)" #myform="ngForm">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 col-md-offset-1">
+          <form (submit)="onSubmit(myform.value)" #myform="ngForm">
           <h2>Register</h2>
           <div class="form-group">
             <label>Username:</label>
@@ -57,11 +57,13 @@
           </div>
           <button class="btn btn-primary" [disabled]="!myform.form.valid || passwordConf != user.password" type='submit'>Register</button>
           <br><br>
+          </form>
         </div>
+
         
-        <form (submit)="verifyUserInfo(theform.value)" #theform="ngForm">
-          <div class="col-md-4 col-md-offset-4">
-              <h2>Login</h2>
+        <div class="col-md-4 col-md-offset-2">
+          <form (submit)="verifyUserInfo(theform.value)" #theform="ngForm">
+            <h2>Login</h2>
             <div class="form-group">
               <label>Username:</label>
               <input class="form-control" type="text" name="username" [(ngModel)]="verifyUser.username" #username1="ngModel" required minlength='2'
@@ -83,7 +85,9 @@
               </div>
             </div>
             <button class="btn btn-primary" [disabled]="!theform.form.valid" type='submit'>Login</button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
-    </form>
+    </div>
+  </body>
+   

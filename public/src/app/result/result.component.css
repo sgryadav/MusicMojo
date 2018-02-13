@@ -1,7 +1,6 @@
-.results{
-    margin-top: 200px;
-} 
-
-h2{
-    color: white;
+.container{
+    margin-top: 100px;
+}
+.btn-danger{
+    float: right;
 }

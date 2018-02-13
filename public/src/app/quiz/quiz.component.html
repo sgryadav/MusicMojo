@@ -2,25 +2,18 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>Genre</title>
-<div class="container">
-  <div class="col-md-6 col-md-offset-3">
-<form #formdata="ngForm"(ngSubmit)="onSubmit(formdata.value)">
-    <h2>{{ questions[0]['question'] }}</h2>
-    <p *ngFor="let option of questions[0]['options']">
-    <input 
-      type='radio' 
-      name="ans_selected" 
-      value={{option}} ngModel> {{option}}
-      <br>
-      </p>
-    <!--<p class="answer">Answer: {{ questions[0]['answer'] }}</p>-->
-    <input class="btn btn-primary" type="submit" value="Submit">
-</form>
-<!-- Score: {{score}}  -->
-<br>
-<button class="btn btn-info" (click)="resultRoute()">Check Results</button>
-<br><br>
-<button class="btn btn-info" (click)="navtoQuiz()">Choose Another Genre</button>
-<br><br>
+<div class="background">
+  <div class="container">
+  <form #formdata="ngForm"(ngSubmit)="onSubmit(formdata.value)">
+      <h2>{{ questions[0]['question'] }}</h2><br>
+      <p *ngFor="let option of questions[0]['options']">
+      <input 
+        type='radio' 
+        name="ans_selected" 
+        value={{option}} ngModel>&nbsp;&nbsp; {{option}}</p>
+      <input class="btn btn-primary" type="submit" value="Submit"><br>
+  </form>
+  <!-- Score: {{score}}  -->
+
   </div>
 </div>
